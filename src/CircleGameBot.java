@@ -1,12 +1,12 @@
 import java.awt.*;
 import java.awt.event.*;
 
-public class CircleGameBot implements MouseListener{
+public class CircleGameBot implements MouseMotionListener{
 
 	
 	public static void main(String[] args) throws AWTException{
 		Robot bot = new Robot();
-		
+		addMouseMotionListener(this);
 		
 	}
 	
@@ -16,39 +16,18 @@ public class CircleGameBot implements MouseListener{
 		System.out.println(bot.getPixelColor(x,y));
 	}
 
-
 	@Override
-	public void mouseClicked(MouseEvent e) {
-		try {
-			printPixelColor(e.getX(),e.getY());
-		} catch (AWTException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
+	public void mouseDragged(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void mouseReleased(MouseEvent e) {
+	public void mouseMoved(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	@Override
-	public void mouseExited(MouseEvent e) {
-		System.out.println("Hey");
-		
-	}
+	
 }
